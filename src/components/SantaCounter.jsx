@@ -1,5 +1,8 @@
 import { useState } from 'react';
+
 import GiftIcon from './GiftIcon';
+import Controls from './Controls';
+
 function SantaCounter() {
     const [count, setCount] = useState(1);
 
@@ -34,8 +37,12 @@ function SantaCounter() {
     return (
         <>
             <h1>Merry Christmas</h1>
-            <button onClick={incrementCount}>+</button>
-            <button onClick={decrementCount}>-</button>
+
+            <Controls
+                onIncrement={incrementCount}
+                onDecrement={decrementCount}
+                isDecrementDisabled={count === 0}
+            />
 
             <h2>Ho ho ho</h2>
             <h4>{message}</h4>
