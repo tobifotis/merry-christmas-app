@@ -1,4 +1,5 @@
-import { useState  } from "react";
+import { useState } from 'react';
+import GiftIcon from './GiftIcon';
 function SantaCounter() {
     const [count, setCount] = useState(1);
 
@@ -28,21 +29,23 @@ function SantaCounter() {
             break;
     }
 
-    const gifts = Array.from({length: count})
+    const gifts = Array.from({ length: count });
 
     return (
         <>
             <h1>Merry Christmas</h1>
             <button onClick={incrementCount}>+</button>
             <button onClick={decrementCount}>-</button>
-           
+
             <h2>Ho ho ho</h2>
             <h4>{message}</h4>
             <p>{message2}</p>
 
-            <div>{gifts.map((_, index)=> (
-                <span key={index}>🎁</span>
-            ))}</div>
+            <div>
+                {gifts.map((_, index) => (
+                    <GiftIcon key={index} />
+                ))}
+            </div>
         </>
     );
 }
