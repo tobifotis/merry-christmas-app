@@ -5,6 +5,8 @@ import Controls from './Controls';
 import Title from './Title';
 import Message from './Message';
 
+import './SantaCounter.css';
+
 function SantaCounter() {
     const [count, setCount] = useState(1);
 
