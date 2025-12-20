@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import GiftIcon from './GiftIcon';
 import Controls from './Controls';
+import Title from './Title';
+import Message from './Message';
 
 function SantaCounter() {
     const [count, setCount] = useState(1);
@@ -15,43 +17,36 @@ function SantaCounter() {
         }
     }
 
-    let message = '';
-    let message2 = '';
-    switch (count) {
-        case 0:
-            message = 'You get nothing from Santa';
-            message2 = 'You were on the naughty list';
-            break;
-        case 1:
-            message = 'You get A present from Santa';
-            message2 = 'You were good this year';
-            break;
-        default:
-            message = `You get ${count} presents from Santa`;
-            message2 = 'You were good this year';
-            break;
-    }
-
     const gifts = Array.from({ length: count });
 
     return (
         <>
-            <h1>Merry Christmas</h1>
+            <div className="container">
+                <div className="main-title">
+                    <Title />
+                </div>
 
-            <Controls
-                onIncrement={incrementCount}
-                onDecrement={decrementCount}
-                isDecrementDisabled={count === 0}
-            />
+                <div className="controls">
+                    <Controls
+                        onIncrement={incrementCount}
+                        onDecrement={decrementCount}
+                        isDecrementDisabled={count === 0}
+                    />
+                </div>
 
-            <h2>Ho ho ho</h2>
-            <h4>{message}</h4>
-            <p>{message2}</p>
+                <div className="sub-title">
+                    <h2>Ho ho ho</h2>
+                </div>
 
-            <div>
-                {gifts.map((_, index) => (
-                    <GiftIcon key={index} />
-                ))}
+                <div className="message">
+                    <Message count={count} />
+                </div>
+
+                <div className="gifts">
+                    {gifts.map((_, index) => (
+                        <GiftIcon key={index} />
+                    ))}
+                </div>
             </div>
         </>
     );
