@@ -1,10 +1,23 @@
+.container {
+    background-color: white;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 70px 60px;
+    text-align: center;
+}
+
+/* Title */
 .main-title {
     position: relative;
+    text-align: center;
     font-family: 'Lato', sans-serif;
     top: 20px;
     color: red;
     display: inline-block;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-shadow: 0 1px 0 #b7b7b7, 0 2px 0 #b7b7b7, 0 3px 0 #b7b7b7,
         0 4px 0 #b7b7b7, 0 5px 0 #b7b7b7, rgba(0, 0, 0.5);
     animation: bounce 0.4s ease infinite alternate;
@@ -63,4 +76,42 @@
         text-shadow: 0 1px 0 #b7b7b7, 0 2px 0 #b7b7b7, 0 3px 0 #b7b7b7,
             0 4px 0 #b7b7b7, 0 5px 0 #b7b7b7, rgba(0, 0, 0.5);
     }
+}
+
+/* Buttons */
+.btn {
+    display: inline;
+    background-color: white;
+    color: #27264b;
+    border: 4px solid rgba(255, 174, 0, 0.514);
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin: 25px;
+    cursor: pointer;
+    font-size: 40px;
+    text-align: center;
+}
+.btn:hover {
+    background-color: #fff7e6;
+
+    border-color: rgb(170, 64, 156);
+
+    box-shadow: 0 6px 18px rgba(3, 184, 255, 0.35),
+        0 0 12px rgba(79, 143, 36, 0.4);
+
+    transform: translateY(-3px);
+    transition: all 0.2s ease;
+}
+
+/* Gift */
+.gifts {
+    font-size: 100px;
+    margin-top: 40px;
+}
+
+/* Messages */
+.message {
+    color: #6d6875;
+    font-size: 1.2rem;
+    margin: 30px;
 }

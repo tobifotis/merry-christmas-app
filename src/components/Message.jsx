@@ -4,23 +4,35 @@ const Message = ({ count }) => {
     let message2 = '';
     switch (count) {
         case 0:
-            message = 'You get nothing from Santa';
-            message2 = 'You were on the naughty list';
+            message = 'You get Nothing from Santa 🎅';
+            message2 = 'You were on the naughty list.';
             break;
         case 1:
-            message = 'You get A present from Santa';
+            message = `You get ${count} present from Santa 🎅`;
             message2 = 'You were good this year';
             break;
-        default:
-            message = `You get ${count} presents from Santa`;
-            message2 = 'You were good this year';
+        case 2:
+            message = `You get ${count} presents from Santa 🎅`;
+            message2 = 'Santa was very pleased with you';
+            break;
+        case 3:
+            message = `You get ${count} presents from Santa 🎅`;
+            message2 = 'You made Santa smile';
+            break;
+        case 4:
+            message = `You get ${count} presents from Santa 🎅`;
+            message2 = 'Santa was impressed';
+            break;
+        case 5:
+            message = `You get ${count} presents from Santa 🎅✨`;
+            message2 = 'You absolutely crushed it!';
             break;
     }
 
     return (
         <>
-            <h4>{message}</h4>
-            <p>{message2}</p>
+            <h2>{message}</h2>
+            <h3>{message2}</h3>
         </>
     );
 };

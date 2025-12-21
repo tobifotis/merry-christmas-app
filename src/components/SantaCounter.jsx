@@ -33,21 +33,18 @@ function SantaCounter() {
                         onIncrement={incrementCount}
                         onDecrement={decrementCount}
                         isDecrementDisabled={count === 0}
+                        isIncrementDisabled={count === 5}
                     />
-                </div>
-
-                <div className="sub-title">
-                    <h2>Ho ho ho</h2>
-                </div>
-
-                <div className="message">
-                    <Message count={count} />
                 </div>
 
                 <div className="gifts">
                     {gifts.map((_, index) => (
                         <GiftIcon key={index} />
                     ))}
+                </div>
+
+                <div className="message">
+                    <Message count={count} />
                 </div>
             </div>
         </>

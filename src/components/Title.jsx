@@ -16,7 +16,7 @@ const Title = () => {
             <span>M</span>
             <span>A</span>
             <span>S</span>
-            <span>!</span>
+            <span></span>
         </h1>
     );
 };
