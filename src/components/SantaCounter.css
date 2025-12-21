@@ -3,10 +3,15 @@ body {
     background-color: rgba(230, 202, 202, 0.788);
     margin-top: 40px;
     overflow-x: hidden;
+    background-image: url('./bg_tree.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
 }
 
 .container {
-    background-color: white;
+    background-color: whitesmoke;
     max-width: 1200px;
     justify-content: center;
     align-items: center;
@@ -124,6 +129,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        height: 190vh;
+    }
     .container {
         padding: 30px;
         margin-top: 30px;
