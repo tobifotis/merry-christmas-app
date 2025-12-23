@@ -1,13 +1,15 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: rgba(230, 202, 202, 0.788);
-    margin-top: 40px;
+    margin-top: 0;
+    padding-top: 40px;
     overflow-x: hidden;
     background-image: url('./bg_tree.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 105vh;
+    min-height: 100vh;
+    height: auto;
 }
 
 .container {
@@ -129,12 +131,10 @@ body {
 }
 
 @media (max-width: 768px) {
-    body {
-        height: 190vh;
-    }
     .container {
         padding: 30px;
         margin-top: 30px;
+        max-width: 350px;
     }
     .main-title {
         font-size: 1.8rem;
@@ -149,5 +149,40 @@ body {
     }
     .message {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+        max-width: 300px;
+    }
+    .main-title {
+        font-size: 1.5rem;
+    }
+    .btn {
+        font-size: 40px;
+        padding: 10px 10px;
+    }
+    .gifts {
+        font-size: 40px;
+    }
+    .message {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-height: 800px) {
+    .container {
+        padding: 10px 5px;
+    }
+
+    .gifts {
+        font-size: 70px;
+        margin-top: 20px;
+    }
+
+    .message {
+        margin: 18px;
     }
 }
