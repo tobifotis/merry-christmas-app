@@ -12,7 +12,8 @@ Built as a fun seasonal project with a clean UI and playful interactions.
 
 Clone the repository
 ```bash
-git clone https://github.com/tobifotis/merry-christmas.git
+git clone https://github.com/tobifotis/merry-christmas-app.git
+
 ```
 
 Install dependencies
